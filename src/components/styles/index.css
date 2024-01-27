@@ -1,0 +1,122 @@
+:root{
+    --main-green:#4caf4f;
+    --border-color: #e8e8e8;
+}
+
+#root{
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+.dashboard-container{
+    grid-template-columns: 2fr 1fr;
+}
+
+.sidebar{
+    border-right: .1rem solid var(--border-color);
+    display: flex;
+    flex-flow: column;
+}
+
+.sidebar>.tab{
+    display: flex;
+    align-items: center;
+}
+
+.sidebar>.tab.green{
+    background-color: #48ab4b40;
+    border-left: .75rem solid #4caf4fbf;
+}
+.sidebar>.tab.hover:hover{
+    background-color: #48ab4b40;
+    border-left: .75rem solid #4caf4fbf;
+}
+
+.sidebar>.tab>.icon{
+    margin: 1.5rem;
+}
+
+.dashboard{ 
+    grid-template-rows: 2fr 1fr ;
+}
+
+.dashboard>div{
+    text-align: center;
+}
+
+.history-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-out;
+}
+  
+.wrapper.is-open {
+    grid-template-rows: 1fr;
+}
+.inner {
+    overflow: hidden;
+}
+
+.arrow{
+    transition: transform 0.2s ease-in;
+}
+
+.arrow.arrow-vertical{
+    transform: rotate(90deg);
+}
+
+.animate{
+    transition: width 0.5s ease-in
+}
+.one_time{
+    background-color: #ff5e00;
+}
+
+.daily{
+    background-color: #53A5D3;
+}
+
+.weekly{
+    background-color: #FFC83A;
+}
+
+.monthly{
+    background-color: #FF0000;
+}
+
+.yearly{
+    background-color: #7453D3;
+}
+
+.one_time-mark-done-button:hover{
+    background-color: #ff5e00;
+    color: white;
+}
+
+.daily-mark-done-button:hover{
+    background-color: #53A5D3;
+    color: white;
+}
+
+.weekly-mark-done-button:hover{
+    background-color: #FFC83A;
+    color: white;
+}
+
+.monthly-mark-done-button:hover{
+    background-color: #FF0000;
+    color: white;
+}
+
+.yearly-mark-done-button:hover{
+    background-color: #7453D3;
+    color: white;
+}

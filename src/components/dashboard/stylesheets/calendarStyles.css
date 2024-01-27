@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.calendar-container{
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    width: 95%;
+    height: 100%;
+    margin: 0rem auto;
+    margin-top: 1rem;
+}
+
+.calendar-grid{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    height: 100%;
+}
+
+.goals-view{
+    display: grid;
+    grid-template-rows: 1fr 8fr;
+}
+
+.one_time-text{
+    color: #ff5e00;
+    border-color: #ff5e00;
+}
+
+.daily-text{
+    color: #53A5D3;
+    border-color: #53A5D3;
+}
+
+.weekly-text{
+    color: #FFC83A;
+    border-color: #FFC83A;
+}
+
+.monthly-text{
+    color: #FF0000;
+    border-color: #FF0000;
+}
+
+.yearly-text{
+    color: #7453D3;
+    border-color: #7453D3;
+}
