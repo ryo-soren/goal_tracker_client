@@ -6,6 +6,7 @@ const SignInPage = props => {
     const {getCurrentUser} = props
     const [usernameOrEmail, setUsernameOrEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [errors, setErrors] = useState([])
     const navigate = useNavigate()
 
     const getDataAndSubmit = event => {
@@ -17,8 +18,10 @@ const SignInPage = props => {
         }
 
         Session.create(formData).then((user) => {
-            if (user.status === 401) {
-                console.log(user.message)
+            console.log(user);
+            if (user.error) {
+                console.log(user.error)
+                setErrors(user.error)
             } else {
                 console.log(user);
                 getCurrentUser()
@@ -48,6 +51,9 @@ const SignInPage = props => {
                     className="rounded border border-[#4CAF4F] focus:outline-[#4CAF4F] w-full"
                     onChange={event=> setPassword(event.currentTarget.value)}/>
                 </div>
+                <ul className="text-red-500">
+                    <li>{errors}</li>
+                </ul>
                 <button className="bg-[#4CAF4F] text-white border-none rounded-full px-4 hover:cursor-pointer w-full" type="submit">Submit</button>
             </form>
             <h1 className="w-full border border-[#4CAF4F] rounded-lg p-5">New to Goal Tracker? <Link to={"/sign_up"} className="text-[#4CAF4F] hover:underline">Create an account</Link></h1>

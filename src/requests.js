@@ -1,5 +1,5 @@
-// const baseURL = "http://localhost:3000/api/v1"
-const baseURL = "https://goal-tracker-api-45bv.onrender.com/api/v1"
+const baseURL = "http://localhost:3000"
+// const baseURL = "https://goal-tracker-api-45bv.onrender.com/api/v1"
 
 export const Goal = {
     index(){
@@ -53,10 +53,6 @@ export const Goal = {
 }
 
 export const User = {
-    show(id){
-        return fetch(`${baseURL}/user/${id}`).then(res => res.json())
-    },
-
     create(params){
         return fetch(`${baseURL}/users`, {
             method: 'POST',
@@ -85,12 +81,18 @@ export const User = {
             credentials: 'include'
         }).then(res => res.json())
     }
+
 }
 
 export const Session = {
     current() {
         return fetch(`${baseURL}/current_user`, {
             credentials: "include",
+            method: "GET",
+            headers: {
+                'Content-type': 'application/json',
+                
+            }
         }).then(res => res.json())
     },
 
@@ -111,4 +113,5 @@ export const Session = {
             credentials: 'include'
         }).then(res => res.json())
     } 
+
 }

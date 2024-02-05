@@ -91,6 +91,7 @@ const GoalForm = props => {
                                             setFrequency(event.currentTarget.value)
                                             defaulDeadlines(event.currentTarget.value)
                                         }}
+                                        required
                                         />
                                         <label className="flex whitespace-nowrap" htmlFor={type}>{capitalizeFirstLetter(type.replace("_", " "))}</label>
                                     </div>
@@ -143,7 +144,8 @@ const GoalForm = props => {
                         <DatePicker selected={new Date(deadline)} value={deadline}
                         className="border border-[#4CAF4F] w-full rounded"
                         minDate={new Date(new Date().getTime() + (24 * 60 * 60 * 1000))}
-                        onChange={date => setDeadline(date)}/>
+                        onChange={date => setDeadline(date)}
+                        required/>
                         <FormErrors forField="deadline" errors={errors}/>
                     </div>
                 </div>

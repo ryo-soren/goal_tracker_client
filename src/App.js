@@ -28,7 +28,7 @@ const App = () => {
   const getCurrentUser = () => {
     Session.current().then(currentUser => {
       console.log(currentUser)
-      if(currentUser?.id){
+      if(!currentUser.status){
         setUser(currentUser)
       }
     })
@@ -42,8 +42,10 @@ const App = () => {
           <Routes>
             <Route path="/sign_up" element={<NewUserPage getCurrentUser={() => getCurrentUser()}/>}/>
             <Route path="/" element={<SignInPage getCurrentUser={() => getCurrentUser()}/>}/>
-            <Route path="/login" element={<SignInPage getCurrentUser={() => getCurrentUser()}/>}/>
-            <Route path="*" element={<SignInPage/>} />
+            <Route path="/sign_in" element={<SignInPage getCurrentUser={() => getCurrentUser()}/>}/>
+            {/* <Route element={<AuthRoutes isAuthenticated={!!user}/>}>
+              <Route path="*" element={<SignInPage/>} />
+            </Route> */}
           </Routes>
           </>
         ) : (

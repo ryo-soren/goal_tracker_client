@@ -11,8 +11,7 @@ const NewUserPage = props => {
     const [username, setUsername] = useState()
     const [password, setPassword] = useState('')
     const [passwordConfirmation, setPasswordConfirmation] = useState('')
-    const [errors, setErrors] = useState([])
-
+    const [errors, setErrors] = useState([])    
     const navigate = useNavigate()
 
     const createUser = params => {
