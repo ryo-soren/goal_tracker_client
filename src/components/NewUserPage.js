@@ -16,6 +16,7 @@ const NewUserPage = props => {
 
     const createUser = params => {
         User.create(params).then(user => {
+            console.log(user);
             if (user.errors) {
                 setErrors([...user.errors])
                 console.log(user.errors);
