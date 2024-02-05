@@ -1,5 +1,6 @@
-// const baseURL = "http://localhost:3000"
-const baseURL = "https://goal-tracker-api-pjeq.onrender.com"
+// const baseURL = "http://localhost:3000/api/v1"
+// const baseURL = "https://goal-tracker-api-pjeq.onrender.com/api/v1"
+const baseURL = "https://goal-tracker-api-pgui.onrender.com/api/v1"
 
 export const Goal = {
     index(){
