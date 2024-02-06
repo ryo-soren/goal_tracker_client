@@ -1,6 +1,7 @@
 // const baseURL = "http://localhost:3000/api/v1"
 // const baseURL = "https://goal-tracker-api-pjeq.onrender.com/api/v1"
-const baseURL = "https://goal-tracker-api-pgui.onrender.com/api/v1"
+// const baseURL = "https://goal-tracker-api-pgui.onrender.com/api/v1"
+const baseURL = "https://damp-scrubland-11065-292af066461e.herokuapp.com"
 
 export const Goal = {
     index(){
