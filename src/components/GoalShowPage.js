@@ -13,6 +13,7 @@ const GoalShowPage = () => {
 
     function getGoal(){
         Goal.show(match.params.id).then((goalData) => {
+            console.log(goalData);
             if (goalData.errors) {
                 console.log(goalData.errors);
             }else{

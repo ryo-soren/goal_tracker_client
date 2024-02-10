@@ -21,7 +21,7 @@ const GoalForm = props => {
             description: description,
             frequency: frequency,
             times: times,
-            deadline: deadline
+            deadline: deadline,
         }
         submitForm(formData)
     }

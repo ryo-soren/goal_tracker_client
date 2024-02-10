@@ -16,6 +16,7 @@ const GoalIndexPage = props => {
 
     function getGoals(){
         Goal.index().then((goalsData) => {
+            console.log(goalsData);
             setGoals(goalsData)
         })
     }
